@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+	margin:0px;
+    padding:0px;
+    background-color: blueviolet
+}
+@font-face {
+    font-family: "BYekan";
+    src: url("/assets/font/BYekan.eot?#") format("eot"), url("/assets/font/BYekan.woff") format("woff"), url("/assets/font/BYekan.ttf") format("truetype");
+}
+.WhiteColor{
+    color: white;
+}
+.NBYekan{
+    font-family: "BYekan";
+}
+.BBYekan{
+    font-weight: bold;
+    font-family: "BYekan";
+}
+.TopMenu{
+    font-family: "BYekan";
+    height:65px;
+    background-color: rgb(218, 47, 47);
+}
+.WideSideBar{
+    width:220px;
+    right: 0;
+    background-color: rgb(58, 58, 58);
+    height: 100%;
+    position: absolute;
+    transition: all 1s;
+}
+.SmallSideBar{
+    padding: 5px;
+    width:40px;
+    right: 0;
+    background-color: rgb(58, 58, 58);
+    height: 100%;
+    position: absolute;
+    transition: all 1s;
+}
+.SmallSideBar> a > .MenuItem > .MenuItemText{
+display: '';
+transition: all 1s;
+
+}
+.SmallSideBar> a > .MenuItem > .MenuItemText{
+display: none;
+
+}
+.Widecontent{
+    margin-right:50px;
+    margin-left: 10px;
+    width: calc(100%-50px);
+    height:auto;
+    background-color: white;
+    transition: all 1s;
+}
+.Smallcontent{
+    transition: all 1s;
+    margin-right: 230px;
+    margin-left: 10px;
+    width: calc(100%-220px);
+    height:auto;
+    background-color: white;
+}
+.MenuItemText{
+    float: right;
+    font-family: "BYekan";
+    color: white;
+text-align: right;
+font-size: 10pt;
+padding-top: 5px;
+transition: all 1s;
+}
+.MenuItem{
+    border-bottom: solid 1px rgb(70, 70, 70);
+    height:40px;
+    transition: all 1s;
+    padding:6px;
+}
+.MenuItem:hover{
+    background-color: rgb(24, 24, 24);
+    cursor: pointer;
+    transition: all 1s;
+}
+.MenuItem:hover> .MenuItemText{
+  padding-right: 10px;
+    transition: all 1s;
+}
+.MenuItem:hover> .MenuImg{
+  padding-left: 10px;
+    transition: all 1s;
+}
+.MenuImg{
+    transition: all 1s;
+}
+.Location{
+    border-radius: 5px;
+    height: 30px;
+    padding-right: 10px;
+    padding-top: 5px;
+    background-color: rgb(241, 241, 241);
+}

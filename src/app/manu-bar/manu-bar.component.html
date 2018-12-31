@@ -1,0 +1,65 @@
+<div class="container-fluid p-0">
+<div class="TopMenu">
+<div class="col-4 float-right p-3">
+  <div class="float-right">
+    <img src="/assets/image/menu-button.png"  style="cursor: pointer;" (click)="ToggleMenu()" class="float-right">
+  </div>
+  <div class="float-right BBYekan pr-3 WhiteColor">
+      مدیریت پورتال
+    </div>
+</div>
+<div class="col-4 float-left p-3">
+    <div class="float-left">
+      <img src="/assets/image/exit.png" class="float-left" style="cursor: pointer;">
+    </div>
+    <div class="float-left NBYekan WhiteColor col-3 text-center" style="font-size: 10pt">
+      <div style="width:100%;height:auto;">
+          کاربر فعلی
+      </div>
+      <div style="width:100%;height:auto;">
+         حمید رضا علیپور
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+<div class='container-fluid p-0'>
+    <div #SideBar class="WideSideBar">
+        <a routerLink="/">
+          <div class="MenuItem">
+            <img class="MenuImg" src="/assets/image/dashboard.png">
+            <span class="MenuItemText">داشبورد</span>
+          </div>
+        </a>
+      <a routerLink="/AccessSection">
+      <div class="MenuItem">
+        <img class="MenuImg" src="/assets/image/puzzle.png">
+        <span class="MenuItemText">بخش های پورتال</span>
+      </div>
+    </a>
+    <a routerLink="/AccessPolicy">
+      <div class="MenuItem">
+        <img class="MenuImg" src="/assets/image/Access.png">
+        <span class="MenuItemText">مدیریت دسترسی ها</span>
+      </div>
+    </a>
+    <a routerLink="/MenuManager">
+      <div class="MenuItem">
+          <img class="MenuImg" src="/assets/image/list.png">
+          <span class="MenuItemText">اطلاعات منو</span>
+        </div>
+      </a>
+    </div>
+    <div #Content class="Smallcontent">
+      <br>
+        <div class="container-fluid Location">
+<div class="float-right">
+<img src='/assets/image/currentloc.png' style='width:16px;float:right'>
+<div class='float-right NBYekan' style='font-size:9pt;direction: rtl;color: rgb(112, 112, 112);margin-right:5px'>موقعیت شما :</div>
+</div>
+        </div>
+        <router-outlet></router-outlet>
+        </div>
+
+</div>
+

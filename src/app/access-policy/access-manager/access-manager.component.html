@@ -1,0 +1,40 @@
+
+<div class='container-fluid NBYekan' style='height:auto;overflow: hidden;padding-top: 40px'>
+    <div class='col-3 m-auto' style='min-height: 40px;height:auto;'>
+    <div class='col-6 float-right'>
+            <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'save'" style="width:100%;">ذخیره دسترسی</button>
+    </div>
+    <div class='col-6 float-right'>
+            <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'cancel'" style="width:100%;">انصراف</button>
+    </div>
+    </div>
+    <div class='col-6 float-right NBYekan' style='min-height: 40px;overflow:hidden;background-color: rgb(243, 243, 243);font-size: 10pt;padding-top:10px;padding-bottom: 10px; '>
+        <div class='container alert alert-danger text-center' style='margin-top:10px'>
+         کاربر را از لیست زیر انتخاب نمایید
+          </div> 
+      <kendo-grid [data]="gridData" [height]="650" style='direction: rtl'>
+            <kendo-grid-column [headerStyle]="{'text-align': 'center'}" field="ProductID" title="کد شخص" width="100" style='text-align: center' >
+            </kendo-grid-column>
+            <kendo-grid-column [headerStyle]="{'text-align': 'center'}"  field="ProductName" title="نام و نام خانوادگی" width="200" style='text-align: center' >
+            </kendo-grid-column>
+            <ng-template kendoGridNoRecordsTemplate>
+                <span class='float-right'> کاربری برای نمایش وجود ندارد</span>
+              </ng-template>
+        </kendo-grid>     
+    </div>
+    <div class='col-6 float-right NBYekan' style='min-height: 40px;overflow:hidden;background-color: rgb(243, 243, 243);font-size: 10pt;padding-top:10px;padding-bottom: 10px; '>
+        <div class='container alert alert-info text-center' style='margin-top:10px'>
+         قسمت های مورد نظر را جهت اعطای دسترسی انتخاب نمایید
+          </div> 
+      <kendo-grid [data]="gridData" [height]="650" style='direction: rtl'>
+            <kendo-grid-column [headerStyle]="{'text-align': 'center'}" field="ProductID" title="کد بخش" width="100" style='text-align: center' >
+            </kendo-grid-column>
+            <kendo-grid-column [headerStyle]="{'text-align': 'center'}"  field="ProductName" title="عنوان بخش" width="200" style='text-align: center' >
+            </kendo-grid-column>
+            <ng-template kendoGridNoRecordsTemplate>
+               <span class='float-right'> بخشی برای نمایش وجود ندارد</span>
+             </ng-template>
+        </kendo-grid>     
+    </div>
+    </div>
+  

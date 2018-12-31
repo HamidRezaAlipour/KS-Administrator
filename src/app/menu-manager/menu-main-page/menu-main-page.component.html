@@ -1,0 +1,71 @@
+
+<div class='container-fluid NBYekan' style='height:auto;overflow: hidden;padding-top: 40px'>
+<div class='col-7 float-right' style='min-height: 40px;height:auto;'>
+<div class='col-2 float-right'>
+        <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'add'" style="width:100%;">تعریف آیتم</button>
+</div>
+<div class='col-2 float-right'>
+        <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'edit'" style="width:100%;">ویرایش اطلاعات</button>
+</div>
+<div class='col-2 float-right'>
+        <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'save'" style="width:100%;">ذخیره اطلاعات</button>
+</div>
+<div class='col-2 float-right'>
+        <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'delete'" style="width:100%;"> حذف آیتم</button>
+</div>
+<div class='col-2 float-right'>
+        <button kendoButton class='float-right' (click)="onButtonClick()" [icon]="'cancel'" style="width:100%;">انصراف</button>
+</div>
+</div>
+<div class='col-8 m-auto NBYekan' style='min-height: 40px;overflow:hidden;background-color: rgb(243, 243, 243);font-size: 10pt;padding-top:10px;padding-bottom: 10px; '>
+                    <div class="card" style="direction:rtl">
+                        <div class="card-block">
+                            <form class="k-form">
+                                <div class='col-4 float-right' style='min-height: 60px;overflow: hidden'>
+                                <label class="k-form-field">
+                                    <span class="float-right" >عنوان منو :</span>
+                                    <input class="k-textbox" placeholder="عنوان مطلب ...." />
+                                </label>
+                            </div>
+                            <div class='col-4 float-right' style='min-height: 60px;overflow: hidden'>
+                                    <label class="k-form-field">
+                                        <span class="float-right" >لینک منو :</span>
+                                        <input class="k-textbox" placeholder="عنوان مطلب ...." />
+                                    </label>
+                                </div>
+                                <div class='col-4 float-right'  style='min-height: 60px;overflow: hidden'>
+                                        <div class="k-form-field">
+                                                <span class="float-right" >وضعیت منو :</span>
+                                                <div class="col-12" style="text-align: center;clear: both">
+                                                        <input type="radio" name="group" id="radio1" class="k-radio" checked />
+                                                        <label class="k-radio-label" for="radio1">فعال</label>
+                                                        <input type="radio" name="group" class="k-radio" id="radio3" />
+                                                        <label class="k-radio-label" for="radio3">غیرفعال</label>
+                                                </div>
+                                             </div>
+                                    </div>
+                                    <div class='col-4 float-right'  style='min-height: 70px;overflow: hidden'>
+                                            <label class="k-form-field">
+                                                <span class="float-right" >آیکن منو :</span>
+                                                <input class="k-textbox" placeholder="عنوان مطلب ...." />
+                                            </label>
+                                        </div>
+                            </form>
+                        </div>
+            </div>
+</div>
+<div class='container' style='margin-top:10px'>
+        <kendo-grid [data]="gridData" [height]="450" style='direction: rtl'>
+                <kendo-grid-column [headerStyle]="{'text-align': 'center'}" field="ProductID" title="کد" width="40" style='text-align: center' >
+                </kendo-grid-column>
+                <kendo-grid-column [headerStyle]="{'text-align': 'center'}"  field="ProductName" title="عنوان منو" width="200" style='text-align: center' >
+                </kendo-grid-column>
+                <kendo-grid-column  [headerStyle]="{'text-align': 'center'}"  field="Category.CategoryName" title="لینک منو" width="300" style='text-align: center' >
+                </kendo-grid-column>
+                <kendo-grid-column  [headerStyle]="{'text-align': 'center'}"  field="Discontinued" style='text-align: center' title="وضعیت منو" width="120">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <input type="checkbox" [checked]="dataItem.Discontinued"/>
+                    </ng-template>
+                </kendo-grid-column>
+            </kendo-grid>
+</div>
